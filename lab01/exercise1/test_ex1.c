@@ -15,6 +15,7 @@ int main(int argc, char **argv) {
     assert(num_z == 0);
 
     /* TODO: Think of a scenario that is not tested by the current test cases. Create one additional test case to test this scenario. */
+    assert(!(num_z > strlen(str)));
 
     printf("Congrats! If you have made it to this line, your Part 1 Test cases are all passing!\n");
 
@@ -36,7 +37,10 @@ int main(int argc, char **argv) {
     assert(dna_seq_2.T_count == 0);
 
     /* TODO: Think of a scenario that is not tested by the current test cases. Create one additional test case to test this scenario. */
-
+    // check if the sum of all count is equal to given sequence length
+    assert((dna_seq_2.A_count + dna_seq_2.C_count) == strlen(dna_seq_2.sequence));
+    // check if we are getting negative numbers
+    assert(dna_seq_2.G_count >= 0);
     printf("Congrats! If you have made it to this line, your Part 2 Test cases are all passing!\n");
 
     return 0;

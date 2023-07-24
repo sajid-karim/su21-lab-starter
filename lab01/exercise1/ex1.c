@@ -26,10 +26,19 @@ All letters will be upper case. */
 void compute_nucleotide_occurrences(DNA_sequence *dna_seq) {
     /* TODO: implement compute_nucleotide_occurances */
     int i = 0;
+ 
+    // run loop till NULL terminator
 
     while (dna_seq->sequence[i] != '\0')
     {   
         int count = 0;
+        
+        /*
+            * switch for all the present nucleotide in the sequence
+            * default case wrong nucleotide
+            * calls num_occurrences to count each nucleotide and stores
+            * the value in dna_deq struct for each of them
+        */
 
         switch (dna_seq->sequence[i])
         {
