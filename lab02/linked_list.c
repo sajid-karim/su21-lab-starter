@@ -1,3 +1,4 @@
+// Copyright sajid karim
 #include <stdio.h>
 #include <stdlib.h>
 #include "linked_list.h"
@@ -53,7 +54,7 @@ void print_list(struct Node *head) {
 
 /* Iteratively reverses a linked list whose first node is HEAD */
 void reverse_list(struct Node **head) {
-    if (head == NULL) {
+    if (head == NULL || *head == NULL) {
         return;
     }
     struct Node *curr = *head;
@@ -75,6 +76,10 @@ void add_to_back(Node **head, int data) {
         return;
     }
     Node *new_node = create_node(data);
+    if (*head == NULL) {
+        *head = new_node;
+        return;
+    }
     Node *prev;
     for (Node *curr = *head; curr != NULL; curr = curr->next) {
         prev = curr;
