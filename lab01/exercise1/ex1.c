@@ -1,6 +1,7 @@
 // Copyright 2023 Sajid karim"
 #include "ex1.h"
 #include <string.h>
+#include <stdio.h>
 
 /* Returns the number of times LETTER appears in STR.
 There are two different ways to iterate through a string.
